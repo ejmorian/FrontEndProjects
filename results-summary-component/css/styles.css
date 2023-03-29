@@ -1,0 +1,218 @@
+@font-face {
+    font-family: Hanken;
+    src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue-background: rgb(120, 87, 255);
+    --Light-royal-blue-background: rgb(46, 43, 233);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    font-family: Hanken;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Pale-blue);
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.card {
+    margin: 0 auto;
+    background-color: var(--White);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
+
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 400px;
+}
+
+.result {
+    background-color: var(--Light-royal-blue-background);
+    background-image: linear-gradient(to bottom, rgb(120, 87, 255, 0.75), rgb(46, 43, 233));
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.result h2 {
+    color: var(--Light-lavender);
+}
+
+.result .circle {
+    height: 200px;
+    border-radius: 50%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, rgb(78, 33, 202), hwb(241 13% 21% / 0));
+
+}
+
+.result .circle .score {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--Pale-blue);
+}
+
+.result .circle {
+    color: var(--Light-lavender);
+}
+
+.feedback h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--Pale-blue);
+    margin-bottom: 1rem;
+}
+
+.feedback p {
+    color: var(--Light-lavender)
+}
+
+.summary {
+    max-width: 400px;
+    padding: 1rem;
+}
+
+.summary .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 350px;
+    margin: 0 auto;
+}
+
+
+.summary h2 {
+    text-align: left;
+    color: var(--Dark-gray-blue)
+}
+
+.attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.attribute:nth-of-type(1) {
+    color: rgb(255, 87, 87);
+    background-color: rgb(255, 87, 87, 0.15);
+}
+
+.attribute:nth-of-type(2) {
+    color: rgb(255, 176, 31);
+    background-color: rgb(255, 176, 31, 0.15);
+}
+
+.attribute:nth-of-type(3) {
+    color: rgb(0, 189, 145);
+    background-color: rgb(0, 189, 145, 0.15);
+
+}
+
+.attribute:nth-of-type(4) {
+    color: rgb(17, 37, 212);
+    background-color: rgb(17, 37, 212, 0.15);
+}
+
+button {
+    margin-top: 2rem;
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    background-color: var(--Dark-gray-blue);
+    color: var(--Light-lavender);
+    cursor: pointer;
+
+}
+
+button:active {
+    background-image: linear-gradient(to bottom, rgb(120, 87, 255), rgb(46, 43, 233));
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribute .type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.attribute p {
+    color: var(--Dark-gray-blue);
+}
+
+.attribute span {
+    color: rgba(48, 59, 90, 0.516);
+}
+
+@media (max-width: 880px) {
+
+    .card {
+        max-width: min-content;
+    }
+
+    .result,
+    .summary {
+        min-width: 350px;
+    }
+
+    body {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .summary {
+        min-height: 500px;
+    }
+
+
+}
